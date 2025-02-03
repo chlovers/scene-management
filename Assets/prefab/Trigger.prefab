@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3005949992469605485}
   - component: {fileID: 1063242883764332236}
   - component: {fileID: 2775823022549989944}
+  - component: {fileID: 90981232477921872}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.35686275, g: 0.6901961, b: 0.369571, a: 0.6392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -143,5 +144,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865b2d4a93f227a438971acc45287f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: 
-  scenes: 
+  spawnPoint: 
+  sceneToLoad: 
+--- !u!114 &90981232477921872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511901692908962824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b288f15552ee244b6539975d83a7e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
