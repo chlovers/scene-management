@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 
 {
-    public GameObject mikebobble;
+    public GameObject Player;
+    private string Spawnpoint;
 
     public void Playbutton()
     {
         SceneManager.LoadScene("GamePlay");
-
+        
     }
 
     public void Quitbutton()
@@ -20,38 +21,73 @@ public class LevelManager : MonoBehaviour
         Application.Quit();
 
     }
+    public void Start()
+    {
+        Player = GameObject.FindWithTag("Player");
+    }
 
     private void Update()
     {
-       if(Input.GetKey(KeyCode.Alpha2))
-        {
-            SceneManager.LoadScene(1);
-            spawnplayerGP();
-        }
-
-       if(Input.GetKey(KeyCode.Alpha1))
-        {
-            SceneManager.LoadScene(0);
-            spawnplayermenu();
-           
-        }
+  
 
 
     }
- 
-
-    public void spawnplayerGP()
+    private void OnEnable()
     {
-     GameObject spwan =  GameObject.Find("SpawnPointGP");
         
-        mikebobble.transform.position = spwan.transform.position;
+
+
     }
+    private void OnDisable()
+    {
+       
+    }
+
+    public void Loadscenesp(string scenes, string spawnpoint)
+    {
+        Spawnpoint = spawnpoint;
+SceneManager.sceneLoaded += spawnplayerGP;
+
+        SceneManager.LoadScene(scenes);
+
+    }
+
+
+    public void spawnplayerGP(Scene GamePlay, LoadSceneMode mode)
+    {
+
+        Setpoint(Spawnpoint);
+
+         SceneManager.sceneLoaded -= spawnplayerGP;
+    }
+
+    public void Setpoint(string Spawnpoint)
+    {
+
+        GameObject spawnpointOJ = GameObject.Find(Spawnpoint);
+        if(spawnpointOJ != null)
+        {
+            Transform spawnpointtf = spawnpointOJ.transform;
+            Player.transform.position = spawnpointtf.position;
+        }
+
+
+    }
+  /*   public void leavebasement()
+    {
+        GameObject spawn = GameObject.Find("SpawnPointUp");
+        Player.transform.position = spawn.transform.position;
+    }    
+
+
 
     public void spawnplayermenu()
     {
         GameObject spwan = GameObject.Find("SpawnPointMenu");
         Debug.Log("spawned");
-        mikebobble.transform.position = spwan.transform.position;
+        Player.transform.position = spwan.transform.position;
     }
+    */
+   
 }
 

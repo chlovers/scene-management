@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GamePlay.unity
     guid: 6c42f9bc1babfe74bb600a45c1d0d88b
   - enabled: 1
-    path: Assets/Scenes/GamePlay2ElectricBoogaloo.unity
+    path: Assets/Scenes/Basement.unity
     guid: 692183f0bb0bc4645aecbba424ef4cd1
   m_configObjects: {}
