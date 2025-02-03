@@ -340,6 +340,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger
       objectReference: {fileID: 0}
+    - target: {fileID: 2775823022549989944, guid: e80900e695078864e941e67dad6efb0e, type: 3}
+      propertyPath: spawnPoint
+      value: SpawnPointUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775823022549989944, guid: e80900e695078864e941e67dad6efb0e, type: 3}
+      propertyPath: sceneToLoad
+      value: GamePlay
+      objectReference: {fileID: 0}
     - target: {fileID: 3541742171388589453, guid: e80900e695078864e941e67dad6efb0e, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.1815001

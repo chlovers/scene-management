@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Triggers : MonoBehaviour
 {
-    public string SpawnPoint;
-    public string scenes;
+    public string spawnPoint;
+    public string sceneToLoad;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.levelManager.Loadscenesp(scenes, SpawnPoint);
+            Debug.Log(sceneToLoad + spawnPoint);
+           GameManager.Instance.levelManager.Loadscenesp(sceneToLoad, spawnPoint);
         }
     }
 

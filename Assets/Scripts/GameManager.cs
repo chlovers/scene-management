@@ -17,6 +17,18 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            GameObject.Destroy(gameObject);
+        }
+        else
+        {
+            GameObject.DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

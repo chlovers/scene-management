@@ -46,19 +46,19 @@ public class LevelManager : MonoBehaviour
     public void Loadscenesp(string scenes, string spawnpoint)
     {
         Spawnpoint = spawnpoint;
-SceneManager.sceneLoaded += spawnplayerGP;
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
         SceneManager.LoadScene(scenes);
 
     }
 
 
-    public void spawnplayerGP(Scene GamePlay, LoadSceneMode mode)
+    public void OnSceneLoaded(Scene GamePlay, LoadSceneMode mode)
     {
 
         Setpoint(Spawnpoint);
 
-         SceneManager.sceneLoaded -= spawnplayerGP;
+         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void Setpoint(string Spawnpoint)
